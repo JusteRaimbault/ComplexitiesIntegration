@@ -1,0 +1,82 @@
+\begin{thebibliography}{10}
+
+\bibitem{chu2008criteria}
+Dominique Chu.
+\newblock Criteria for conceptual and operational notions of complexity.
+\newblock {\em Artificial Life}, 14(3):313--323, 2008.
+
+\bibitem{deffuant2015visions}
+Guillaume Deffuant, Arnaud Banos, David Chavalarias, Cyrille Bertelle, Nicolas
+  Brodu, Pablo Jensen, Annick Lesne, Jean-Pierre M{\"u}ller, {\'E}dith Perrier,
+  and Franck Varenne.
+\newblock Visions de la complexit{\'e}. le d{\'e}mon de laplace dans tous ses
+  {\'e}tats.
+\newblock {\em Natures Sciences Soci{\'e}t{\'e}s}, 23(1):42--53, 2015.
+
+\bibitem{ottino2004engineering}
+Julio~M Ottino.
+\newblock Engineering complex systems.
+\newblock {\em Nature}, 427(6973):399, 2004.
+
+\bibitem{jennings2003agent}
+Nicholas~R Jennings and Stefan Bussmann.
+\newblock Agent-based control systems: Why are they suited to engineering
+  complex systems?
+\newblock {\em IEEE control systems}, 23(3):61--73, 2003.
+
+\bibitem{farmer2009economy}
+J~Doyne Farmer and Duncan Foley.
+\newblock The economy needs agent-based modelling.
+\newblock {\em Nature}, 460(7256):685--686, 2009.
+
+\bibitem{latour1977rhetorique}
+Bruno Latour and Paolo Fabbri.
+\newblock La rh{\'e}torique de la science [pouvoir et devoir dans un article de
+  science exacte].
+\newblock {\em Actes de la recherche en sciences sociales}, 13(1):81--95, 1977.
+
+\bibitem{edgar1986methode}
+Edgar Morin.
+\newblock La m{\'e}thode 3. la connaissance de la connaissance.
+\newblock {\em Essais, Seuil}, 1986.
+
+\bibitem{chavalarias2013phylomemetic}
+David Chavalarias and Jean-Philippe Cointet.
+\newblock Phylomemetic patterns in science evolution---the rise and fall of
+  scientific fields.
+\newblock {\em Plos One}, 8(2):e54847, 2013.
+
+\bibitem{waltman2010unified}
+Ludo Waltman, Nees~Jan van Eck, and Ed~CM Noyons.
+\newblock A unified approach to mapping and clustering of bibliometric
+  networks.
+\newblock {\em Journal of Informetrics}, 4(4):629--635, 2010.
+
+\bibitem{raimbault2017exploration}
+Juste Raimbault.
+\newblock Exploration of an interdisciplinary scientific landscape.
+\newblock {\em arXiv preprint arXiv:1712.00805}, 2017.
+
+\bibitem{estefan2007survey}
+Jeff~A Estefan et~al.
+\newblock Survey of model-based systems engineering (mbse) methodologies.
+\newblock {\em Incose MBSE Focus Group}, 25(8):1--12, 2007.
+
+\bibitem{newman2011complex}
+Mark~EJ Newman.
+\newblock Complex systems: A survey.
+\newblock {\em arXiv preprint arXiv:1112.1440}, 2011.
+
+\bibitem{tero2007mathematical}
+Atsushi Tero, Ryo Kobayashi, and Toshiyuki Nakagaki.
+\newblock A mathematical model for adaptive transport network in path finding
+  by true slime mold.
+\newblock {\em Journal of theoretical biology}, 244(4):553--564, 2007.
+
+\bibitem{tero2010rules}
+Atsushi Tero, Seiji Takagi, Tetsu Saigusa, Kentaro Ito, Dan~P. Bebber, Mark~D.
+  Fricker, Kenji Yumiki, Ryo Kobayashi, and Toshiyuki Nakagaki.
+\newblock Rules for biologically inspired adaptive network design.
+\newblock {\em Science}, 327(5964):439--442, 2010.
+
+\end{thebibliography}

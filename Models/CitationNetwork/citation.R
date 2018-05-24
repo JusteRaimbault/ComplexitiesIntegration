@@ -35,14 +35,27 @@ write_graph(citationcorehigher,file='data/corehigher.gml',format = 'gml')
 # : separate two graphs ; see communities within each
 # : check higher order core (while deg = 1)
 
+##
+# size of two subgraphs / export for viz
+V(citation)[V(citation)$name=="4678769739448217155"]
+incident(citation,V(citation)$name=="4678769739448217155",mode="in")
+
+V(citation)[V(citation)$name=="5581471115472258458"]
+incid=c()
+for(i in neighbors(citation,V(citation)$name=="5581471115472258458",mode="in")){incid=append(incid,neighbors(citation,i,mode="in"))}
 
 
+# density
 ecount(citationcore)/(vcount(citationcore)*(vcount(citationcore)-1))
 
+# mean degrees
 mean(degree(citation))
 mean(degree(citation,mode = 'in'))
 mean(degree(citationcore,mode = 'in'))
 
+
+
+# modularity / vs null model
 A=as_adjacency_matrix(citationcore,sparse = T)
 M = A+t(A)
 undirected_rawcore = graph_from_adjacency_matrix(M,mode="undirected")

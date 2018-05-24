@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2017)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: /Users/juste/ComplexSystems/ComplexitiesIntegration/Docs/paper/.texpadtmp/paper.aux
+The style file: unsrt.bst
+Database file #1: ../biblio.bib
+Warning--I didn't find a database entry for "beer2004autopoiesis"
+You've used 14 entries,
+            1791 wiz_defined-function locations,
+            541 strings with 6054 characters,
+and the built_in function-call counts, 3071 in all, are:
+= -- 270
+> -- 143
+< -- 0
++ -- 54
+- -- 40
+* -- 236
+:= -- 518
+add.period$ -- 42
+call.type$ -- 14
+change.case$ -- 14
+chr.to.int$ -- 0
+cite$ -- 14
+duplicate$ -- 123
+empty$ -- 293
+format.name$ -- 40
+if$ -- 651
+int.to.chr$ -- 0
+int.to.str$ -- 14
+missing$ -- 14
+newline$ -- 73
+num.names$ -- 14
+pop$ -- 20
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 46
+stack$ -- 0
+substring$ -- 221
+swap$ -- 14
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 33
+width$ -- 16
+write$ -- 153
+(There was 1 warning)
