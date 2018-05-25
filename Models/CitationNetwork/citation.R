@@ -38,11 +38,15 @@ write_graph(citationcorehigher,file='data/corehigher.gml',format = 'gml')
 ##
 # size of two subgraphs / export for viz
 V(citation)[V(citation)$name=="4678769739448217155"]
-incident(citation,V(citation)$name=="4678769739448217155",mode="in")
+incid1=c(V(citation)[V(citation)$name=="4678769739448217155"],neighbors(citation,V(citation)$name=="4678769739448217155",mode="in"))
+for(i in neighbors(citation,V(citation)$name=="4678769739448217155",mode="in")){incid1=append(incid1,neighbors(citation,i,mode="in"))}
 
 V(citation)[V(citation)$name=="5581471115472258458"]
-incid=c()
-for(i in neighbors(citation,V(citation)$name=="5581471115472258458",mode="in")){incid=append(incid,neighbors(citation,i,mode="in"))}
+incid2=c(V(citation)[V(citation)$name=="5581471115472258458"],neighbors(citation,V(citation)$name=="5581471115472258458",mode="in"))
+for(i in neighbors(citation,V(citation)$name=="5581471115472258458",mode="in")){incid2=append(incid2,neighbors(citation,i,mode="in"))}
+
+write_graph(induced_subgraph(citation,incid1$name),file='data/csnatural.gml',format = 'gml')
+write_graph(induced_subgraph(citation,incid2$name),file='data/cseng.gml',format = 'gml')
 
 
 # density

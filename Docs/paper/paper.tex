@@ -78,8 +78,8 @@ $^{2}$ UMR-T IFSTTAR 9403 LVMT, Champs-sur-Marne, France\\
 
 
 \begin{abstract}
-System engineering has developed a mature knowledge on how to design, integrate and manage complex industrial systems, whereas disciplines studying complex systems in nature or society also propose numerous tools for their understanding. Socio-technical systems, that situate at their intersection, could benefit from a higher integration between these. This position paper advocates for such integrated approaches. A bibliometric study through citation networks first illustrates the respective isolation of some of these approaches. We then produce a proof-of-concept of how the transfer of concepts from biology can be useful for the design of complex systems, in the particular case of transportation networks, using a biological network growth model to produce various optimal networks in terms of cost and efficiency. We finally discuss possible disciplinary positioning of such hybrid approaches.
-\keywords{System Engineering; Complex Systems Science; Bibliometrics; Bio-inspired Network Design; Integrative Disciplines}
+Systems engineering has developed a mature knowledge on how to design, integrate and manage complex industrial systems, whereas disciplines studying complex systems in nature or society also propose numerous tools for their understanding. Socio-technical systems, that situate at their intersection, could benefit from a higher integration between these. This position paper advocates for such integrated approaches. A bibliometric study through citation networks first illustrates the respective isolation of some of these approaches. We then produce a proof-of-concept of how the transfer of concepts from biology can be useful for the design of complex systems, in the particular case of transportation networks, using a biological network growth model to produce various optimal networks in terms of cost and efficiency. We finally discuss possible disciplinary positioning of such hybrid approaches.
+\keywords{Systems Engineering; Complex Systems Science; Bibliometrics; Bio-inspired Network Design; Integrative Disciplines}
 \end{abstract}
 
 
@@ -88,10 +88,32 @@ System engineering has developed a mature knowledge on how to design, integrate 
 \section{Introduction}
 %%%%%%%%%%%%%%%%
 
-
+% - socio-technical system at intersection of se/cs
 % - different types of complexities : systems engineering / even within complex systems
 % - but finally treat of the same objects ? debates of top-down/bottom-up
 
+
+Socio-technical systems can be understood as the appropriation and use of technical artefacts by social agents, and lie therefore at the intersection of engineered systems and complex social systems. Urban systems are a typical illustration of such systems and of the related issues to design and manage them \cite{portugali2012complexity}. 
+
+
+
+\paragraph{Systems engineering}
+
+
+% Incose architecting principles for systems of systems, early works
+\cite{maier1998architecting}
+
+% Model-based system engineering
+\cite{estefan2007survey}
+
+% international standards
+\cite{schneider2013literature}
+
+% current issues examples : coupling mbse and ple
+\cite{schafer2017challenges}
+
+
+\paragraph{Complex systems science}
 
 \cite{chu2008criteria} recalls that several approaches to complexity do not
 
@@ -102,6 +124,13 @@ System engineering has developed a mature knowledge on how to design, integrate 
 
 
 \cite{jennings2003agent} suggests that agent-based systems are an interesting alternative for the design of control systems, in particular thanks to their increased flexibility and robustness.
+
+% complex systems for se ; our paper is in that spirit, illustrating with concrete examples
+\cite{sheard2009principles}
+
+% similar with design thinking
+\cite{durantin2017disruptive} 
+
 
 These issues of integrating complexities is indeed not particular to system engineering, as \cite{farmer2009economy} show that in the case of economics, policy-related benefits would be obtained by a more frequent use of agent-based approaches. 
 
@@ -133,10 +162,14 @@ We use here the tool provided by \cite{raimbault2017exploration} to reconstruct 
 \cite{newman2011complex} for complex systems
 % not too specialized, as network science ; agent-based ; dynamical systems ; etc.
 % -> good compromise ?
-
+% alternative
+\cite{stone2000multiagent}
 
 \subsection{Results}
 
+
+% bridge paper. Note : self-fulfilling, as our work adds a bridge
+\cite{hasan2013spatiotemporal}
 
 
 % recall limitation : not latest reference for example
@@ -208,7 +241,10 @@ We use here the tool provided by \cite{raimbault2017exploration} to reconstruct 
 
 How can the transfer of concepts from other disciplines can inform system design ? Contributions giving elements of answer to this question are indeed not new, and the entire field of \emph{Artificial Life} 
 
+\cite{langton1989artificial}
 
+% example of cellular automatons
+\cite{langton1986studying}
 
 \cite{beer2004autopoiesis} autopoiesis and cognition in the game of life
 
@@ -287,18 +323,41 @@ The generation of a network can be achieved from an initial network, until reach
 
 %%%%%%%%%%%%%%
 \begin{figure}
-	
-	\caption{Example of networks.}
+	\includegraphics[width=0.32\linewidth]{figures/bionw_territ6_gamma1_1_bis.png}	\includegraphics[width=0.32\linewidth]{figures/bionw_territ6_gamma1_2_quart.png}
+	\includegraphics[width=0.32\linewidth]{figures/bionw_territ6_gamma1_25_bis.png}\\	\includegraphics[width=0.32\linewidth]{figures/bionw_territ6_gamma1_3_bis.png}	\includegraphics[width=0.32\linewidth]{figures/bionw_territ6_gamma1_5.png}	\includegraphics[width=0.32\linewidth]{figures/bionw_territ6_gamma1_8.png}
+	\caption{\textbf{Example of networks.} We show, for a given urban configuration (centers and population density in background color), the networks generated with varying values of the parameter $\gamma$.}
 \end{figure}
 %%%%%%%%%%%%%%
 
+% Examples (values from netlogo5 - examples urban config)
+% gamma = 1.1 (bis)
+% observer: "length = 0.46194462288828997"
+% observer: "perf = 1.3060253131748516"
 
+% gamma = 1.2 (quart)
+% observer: "length = 0.33904251385875966"
+% observer: "perf = 1.125244732766119"
 
+% gamma = 1.25 (bis)
+% observer: "length = 0.3044382201583243"
+% observer: "perf = 1.135368793729363"
+
+% gamma = 1.3 (bis)
+% observer: "length = 0.2742468359876043"
+%observer: "perf = 1.1384882546283668"
+
+% gamma = 1.5
+% observer: "length = 0.26534572051770583"
+% observer: "perf = 1.1405973338894875"
+
+% gamma = 1.8
+% observer: "length = 0.20788352793069367"
+% observer: "perf = 1.308682580064978"
 
 %%%%%%%%%%%%%%
 \begin{figure}
-	
-	\caption{Optimality of simulated networks.}
+	\includegraphics[width=1.2\linewidth]{figures/paretoSpeedLength.png}
+	\caption{Pareto evaluation of simulated networks.}
 \end{figure}
 %%%%%%%%%%%%%%
 
@@ -326,7 +385,7 @@ The generation of a network can be achieved from an initial network, until reach
 \section*{Acknowledgments}
 
 % EGI
-
+Results obtained in this paper were computed on the vo.complex-system.eu virtual organization of the European Grid Infrastructure ( http://www.egi.eu ). We thank the European Grid Infrastructure and its supporting National Grid Initiatives (France-Grilles in particular) for providing the technical support and infrastructure.
 
 %%%%%%%%%%%%%%%%
 %% Biblio
