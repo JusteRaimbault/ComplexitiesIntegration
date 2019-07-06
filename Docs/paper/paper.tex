@@ -1,85 +1,61 @@
-
-%%%%%%%%%%%%%%%%%%%%%%% file typeinst.tex %%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% A template for Wiley article submissions.
+% Developed by Overleaf. 
 %
-% This is the LaTeX source for the instructions to authors using
-% the LaTeX document class 'llncs.cls' for contributions to
-% the Lecture Notes in Computer Sciences series.
-% http://www.springer.com/lncs       Springer Heidelberg 2006/05/04
+% Please note that whilst this template provides a 
+% preview of the typeset manuscript for submission, it 
+% will not necessarily be the final publication layout.
 %
-% It may be used as a template for your own input - copy it
-% to a new file with a new name and use it as the basis
-% for your article.
-%
-% NB: the document class 'llncs' has its own and detailed documentation, see
-% ftp://ftp.springer.de/data/pubftp/pub/tex/latex/llncs/latex2e/llncsdoc.pdf
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Usage notes:
+% The "blind" option will make anonymous all author, affiliation, correspondence and funding information.
+% Use "num-refs" option for numerical citation and references style.
+% Use "alpha-refs" option for author-year citation and references style.
 
+\documentclass[alpha-refs]{wiley-article}
+% \documentclass[blind,num-refs]{wiley-article}
 
-\documentclass[runningheads,a4paper]{llncs2e/llncs}
+% Add additional packages here if required
+\usepackage{siunitx}
 
-\usepackage[T1]{fontenc}
+% Update article type if known
+\papertype{Original Article}
+% Include section in journal if known, otherwise delete
+\paperfield{Journal Section}
 
-\usepackage{amssymb,amsmath,bbm}
-\setcounter{tocdepth}{3}
-\usepackage{graphicx}
+\title{This is my title}
 
-\usepackage{url}
-\urldef{\mailjr}\path|juste.raimbault@polytechnique.edu|
+% List abbreviations here, if any. Please note that it is preferred that abbreviations be defined at the first instance they appear in the text, rather than creating an abbreviations list.
+\abbrevs{ABC, a black cat; DEF, doesn't ever fret; GHI, goes home immediately.}
 
-  
-\newcommand{\keywords}[1]{\par\addvspace\baselineskip
-\noindent\keywordname\enspace\ignorespaces#1}
+% Include full author names and degrees, when required by the journal.
+% Use the \authfn to add symbols for additional footnotes and present addresses, if any. Usually start with 1 for notes about author contributions; then continuing with 2 etc if any author has a different present address.
+\author[1\authfn{1}]{Author One PhD}
+\author[2\authfn{1}]{Author A.~Two MD}
+\author[2\authfn{2}]{Author Three PhD}
+\author[2]{Author B.~Four}
 
-\newcommand{\noun}[1]{\textsc{#1}}
+\contrib[\authfn{1}]{Equally contributing authors.}
 
-\usepackage[normalem]{ulem} % use normalem to protect \emph
-\usepackage{xcolor}
-\newcommand\change{\bgroup\markoverwith
-  {\textcolor{yellow}{\rule[-.5ex]{2pt}{2.5ex}}}\ULon}
+% Include full affiliation details for all authors
+\affil[1]{Department, Institution, City, State or Province, Postal Code, Country}
+\affil[2]{Department, Institution, City, State or Province, Postal Code, Country}
 
+\corraddress{Author One PhD, Department, Institution, City, State or Province, Postal Code, Country}
+\corremail{correspondingauthor@email.com}
 
+\presentadd[\authfn{2}]{Department, Institution, City, State or Province, Postal Code, Country}
 
+\fundinginfo{Funder One, Funder One Department, Grant/Award Number: 123456, 123457 and 123458; Funder Two, Funder Two Department, Grant/Award Number: 123459}
+
+% Include the name of the author that should appear in the running header
+\runningauthor{Author One et al.}
 
 \begin{document}
 
-\mainmatter  % start of an individual contribution
-
-
-
-
-% first the title is needed
-\title{\vspace*{-3cm}Reconciling complexities: for a stronger integration of approaches to complex socio-technical systems}
-
-% a short form should be given in case it is too long for the running head
-\titlerunning{Reconciling complexities}
-
-% the name(s) of the author(s) follow(s) next
-%
-% NB: Chinese authors should write their first names(s) in front of
-% their surnames. This ensures that the names appear correctly in
-% the running heads and the author index.
-%
-\author{\noun{Juste Raimbault}$^{1,2}$}
-%
-\authorrunning{Reconciling complexities}
-% (feature abused for this document to repeat the title also on left hand pages)
-
-% the affiliations are given next; don't give your e-mail address
-% unless you accept that it will be published
-\institute{$^{1}$ UPS CNRS 3611 ISC-PIF, Paris, France\\
-$^{2}$ UMR CNRS 8504 G{\'e}ographie-Cit{\'e}s, Paris, France\\
-%$^{2}$ UMR-T IFSTTAR 9403 LVMT, Champs-sur-Marne, France\\
-\mailjr
-}
-
-%\toctitle{Lecture Notes in Computer Science}
-%\tocauthor{Authors' Instructions}
-
 \maketitle
 
-
 \begin{abstract}
+<<<<<<< HEAD
 Systems engineering has developed a mature knowledge on how to design, integrate and manage complex industrial systems, whereas disciplines studying complex systems in nature or society also propose numerous tools for their understanding. Socio-technical systems, that situate at their intersection, could benefit from a higher integration between these. This position paper advocates for such integrated approaches. A bibliometric study through citation networks first illustrates the respective isolation of some of these approaches. We then produce a proof-of-concept of how the transfer of concepts from biology can be useful for the design of complex systems, in the particular case of transportation networks, using a biological network growth model to produce various optimal networks in terms of cost and efficiency. We finally discuss possible disciplinary positioning of such hybrid approaches.
 \keywords{Systems Engineering; Complex Systems Science; Bibliometrics; Bio-inspired Network Design; Integrative Disciplines}
 \end{abstract}
@@ -146,242 +122,107 @@ Statements about disciplines, their positioning and their relations, must often 
 
 We use the tool and method provided by \cite{raimbault2017exploration} to reconstruct backward citation networks from open data. More precisely, given an initial corpus, the scientific papers citing this corpus referenced in google scholar are obtained at a given depth (i.e. including the papers citing the papers citing, and recursively). We start from two nodes, namely \cite{estefan2007survey} as the origin node for system engineerings (considering thus the subdomain of model-based systems engineering approaches) and \cite{newman2011complex} for complex systems (considering an entry from physics). These two references constitute a relevant initial corpus for the following reasons: (i) both are surveys of the literature aiming at giving an overview, and have received a significant number of citations (552 for \cite{estefan2007survey} and 157 for \cite{newman2011complex}) which are comparable in orders of magnitude; (ii) they are not too specific and should represent a consequent part of the fields (in comparison, for complex systems, an alternative such as \cite{stone2000multiagent} would be targeted on multi-agents systems). These choices have naturally an influence on the final results, and we therefore do not claim to construct full maps of the disciplines but to quantitatively illustrate our issue. Programs, data and results of these analyses are available on the open git repository of the project at \url{https://github.com/JusteRaimbault/ComplexitiesIntegration}.
 
+=======
+This is a generic template designed for use by multiple journals, which includes several options for customization. Please consult the author guidelines for the journal to which you are submitting in order to confirm that your manuscript will comply with the journal's requirements. Please replace this text with your abstract.
+>>>>>>> 31ac023d4d109c2d20a0705e1bb20b1dd27fefe9
 
+% Please include a maximum of seven keywords
+\keywords{keyword 1, \emph{keyword 2}, keyword 3, keyword 4, keyword 5, keyword 6, keyword 7}
+\end{abstract}
 
-%%%%%%%%%%%%%%
-\begin{figure}%[h!]
-	\includegraphics[width=\linewidth,height=0.6\textheight]{figures/cseng.png}\\
-	\includegraphics[width=\linewidth,height=0.6\textheight]{figures/csnatural.png}
-	\caption{\textbf{Citation networks for each field.} \textit{(Top)} Citation network for the sample corresponding to system engineering approaches; \textit{(Bottom)} Citation network for the sample corresponding to complex systems science approaches.\label{fig:bothcitnw}}
+\section{First Level Heading}
+Please lay out your article using the section headings and example objects below, and remember to delete all help text prior to submitting your article to the journal.
+
+\begin{figure}[bt]
+\centering
+\includegraphics[width=6cm]{example-image-rectangle}
+\caption{Although we encourage authors to send us the highest-quality figures possible, for peer-review purposes we are can accept a wide variety of formats, sizes, and resolutions. Legends should be concise but comprehensive – the figure and its legend must be understandable without reference to the text. Include definitions of any symbols used and define/explain all abbreviations and units of measurement.}
 \end{figure}
-%%%%%%%%%%%%%%
 
+\subsection{Second Level Heading}
+If data, scripts or other artefacts used to generate the analyses presented in the article are available via a publicly available data repository, please include a reference to the location of the material within the article.
 
-%%%%%%%%%%%%%%
-\begin{figure}[h!]
-	\includegraphics[width=\linewidth]{figures/core.png}
-	\caption{\textbf{Full citation network.} We show the core of the full citation network, corresponding to nodes with a degree larger than one and corresponding edges, to ease readability. The two components shown in Fig.~\ref{fig:bothcitnw} are connected by a small bridge only. Color gives the modularity class of nodes, and node size is proportional to degree.\label{fig:citnw}}
-\end{figure}
-%%%%%%%%%%%%%%
-
-%\subsection{Results}
-
-% - bridge paper. Note : self-fulfilling, as our work adds a bridge
-% - recall limitation : not latest reference for example
-
-The full citation network at depth 2 has 4019 nodes and 4183 edges, and a density of 0.003 which is standard for a citation network. The average in-degree of the core (obtained when removing nodes with a degree equal to one) is 2.13, what means that we indeed obtain branches of the disciplines considered. The network is highly modular, with a modularity of 0.59, corresponding to well identified subfields. We first visualize in Fig.~\ref{fig:bothcitnw} separately the two branches corresponding to the two initial nodes. The size of each is still comparable (3037 nodes for systems engineering and 1304 for complex systems). Clear communities, obtained with a standard community detection algorithm, can be distinguished within each branch: for example in systems engineering, MBSE has its own community; a second important being around the language SysML which is a programming language allowing the implementation of some MBSE approaches; other smaller communities corresponding to application-specific uses, such as manufacturing or aerospace. For the complex systems branch, we obtain various communities in biology, social science, economics, physics, geography. As expected, the latest is much more diverse in scope: we expect thus a higher chance of connexion between the two.
-
-The core of the full network is shown in Fig.~\ref{fig:citnw}. Without tuning the resolution parameter of the community detection algorithm, we obtain a single community for complex systems and several for systems engineering, meaning that practices are comparatively much more clustered in the second. The fact that the two branches are connected (i.e. that the network has a single weakly connected component), was not necessarily expected, and confirms that bridges indeed exist. These are however tiny, as only two references lie in the intersection of the two branches. Surprisingly, the important paper in the intersection in terms of number of citations is \cite{hasan2013spatiotemporal}, which studies spatio-temporal patterns of human mobility: this confirms that socio-technical systems such as urban systems (of which mobility systems are a component) are indeed in the middle, and necessitate the integration of the two approaches.
-
-Despite the limitation of this brief study, such as the scope fixed by the small initial corpus, we illustrate how systems engineering and complex systems do not communicate, and should have therefore their own distinct notions of \emph{complexity}. We propose in the following to show how bridges can be built in a concrete case.
-
-%%% Corpus
-% Survey of model-based systems engineering (MBSE) methodologies;5581471115472258458
-%  2nd order neigh :
-%.  3037/4019 vertices
-%. Modularity: 0.716
-
-% Complex systems: A survey;4678769739448217155
-%  2nd order neigh : 1304/4019 vertices
-% Modularity: 0.799
-%
-% intersection(incid1,incid2)
-% + 2/4019 vertices
-
-
-%%% Results
-
-% ecount(citationcore)/(vcount(citationcore)*(vcount(citationcore)-1))
-% 0.002701705
-
-%mean(degree(citation))
-% 2.444887
-
-%mean(degree(citation,mode = 'in'))
-% 1.222443
-
-%mean(degree(citationcore,mode = 'in'))
-% 2.131646
-
-% directedmodularity(com$membership,A)
-%[1] 0.5855703
-
-%show(paste0(mean(mods)," +- ",sd(mods)))
-% [1] "-0.000427444129744247 +- 0.00601916650457223
-
-
-
-
-
-
-
-%%%%%%%%%%%%%%%%
-\section{A proof-of-concept: biological network generation}
-%%%%%%%%%%%%%%%%
-
-
-\subsection{Context}
-
-% - example of cellular automatons
-
-How can the transfer of concepts from other disciplines can inform system design ? Contributions giving elements of answer to this question are indeed not new, and the entire field of \emph{Artificial Life} \cite{langton1989artificial} has indeed focused on these issues for long, since it aims at designing self-organized systems mimicking properties of living systems. Cellular automatons are a way to do it \cite{langton1986studying}, and properties such as autopoiesis (the ability of a system to maintain its network of processes by acting on its boundary conditions) and cognition have been suggested in Conway's game of life \cite{beer2004autopoiesis}. We consider here the generation of networks by biological entities, and more particularly a food transport network for a micro-organism called \emph{slime mould}, as described by \cite{tero2010rules} which gave a toy illustration of its application to a network design problem.
-
-\subsection{Network generation model}
-
-
-We detail here the model of type \emph{slime mould} used to evolve a biological network, introduced by~\cite{tero2007mathematical}. The broad idea of this model is that a flow, carrying food or people for example, circulates in a network of which the diameter of links evolve in time answering to the evolution of the flow. Self-reinforcement effects allow the convergence towards a steady state network.
-
-A spatial network is composed by nodes characterized by their pressure $p_i$ and by links characterized by their length $L_{ij}$, their diameter $D_{ij}$, an impedance $Z_{ij}$ and the flow traversing them $\phi_{ij}$. The topology of the network is assumed fixed, but the diameters of links can evolve in time. We assume a grid topology with diagonals, in order to cover space with a fine resolution.
-
-The flows in links are characterized by a relation analogous to Ohm's law which writes
-
+% Equations should be inserted using standard LaTeX equation and eqnarray environments, not as graphics, and should be set in the main text
+This is an equation, numbered
 \begin{equation}
-\phi_{ij} = \frac{D_{ij}}{Z_{ij}\cdot L_{ij}} \left(p_i - p_j\right)
+\int_0^{+\infty}e^{-x^2}dx=\frac{\sqrt{\pi}}{2}
 \end{equation}
+And one that is not numbered
+\begin{equation*}
+e^{i\pi}=-1
+\end{equation*}
 
-Furthermore, the conservation of flows at each node (Kirchoff's law) imposes
+\subsection{Adding Citations and a References List}
 
-\begin{equation}
-\sum_i \phi_{ij} = 0
-\end{equation}
+Please use a \verb|.bib| file to store your references. When using Overleaf to prepare your manuscript, you can upload a \verb|.bib| file or import your Mendeley, CiteULike or Zotero library directly as a \verb|.bib| file\footnote{see \url{https://www.overleaf.com/blog/184}}. You can then cite entries from it, like this: \cite{lees2010theoretical}. Just remember to specify a bibliography style, as well as the filename of the \verb|.bib|.
 
-for all $j$ except the source and the sink, that we assume at indices $j_+$ and $j_-$, such that $\sum_i \phi_{ij_+} = I_0$ and $\sum_i \phi_{ij_-} = -I_0$ with $I_0$ initial flow parameter. The combination of above constraints gives for all $j$
+You can find a video tutorial here to learn more about BibTeX: \url{https://www.overleaf.com/help/97-how-to-include-a-bibliography-using-bibtex}.
 
-\begin{equation}
-\sum_i \frac{D_{ij}}{Z_{ij}\cdot L_{ij}} (p_i - p_j) = \mathbbm{1}_{j=j_+} I_0 - \mathbbm{1}_{j=j_-} I_0 
-\end{equation}
+This template provides two options for the citation and reference list style: 
+\begin{description}
+\item[Numerical style] Use \verb|\documentclass[...,num-refs]{wiley-article}|
+\item[Author-year style] Use \verb|\documentclass[...,alpha-refs]{wiley-article}|
+\end{description}
 
-what simplifies into a matrix equation, by denoting $\mathbf{Z} = \left(\frac{\frac{D_{ij}}{Z_{ij}\cdot L_{ij}}}{\sum_i \frac{D_{ij}}{Z_{ij}\cdot L_{ij}}}\right)_{ij}$, and also $\vec{k} = \frac{\mathbbm{1}_{j=j_+} I_0 - \mathbbm{1}_{j=j_-} I_0 }{\sum_i \frac{D_{ij}}{Z_{ij}\cdot L_{ij}}}$ and $\vec{p} = p_i$. This yields
+\subsubsection{Third Level Heading}
+Supporting information will be included with the published article. For submission any supporting information should be supplied as separate files but referred to in the text.
 
-\begin{equation}
-\left(Id - \mathbf{Z}\right) \vec{p} = \vec{k}
-\end{equation}
+Appendices will be published after the references. For submission they should be supplied as separate files but referred to in the text.
 
-The system admits a solution when $\left(Id - \mathbf{Z}\right)$ is invertible. The space of invertible matrices being dense in $\mathcal{M}_n(\mathbb{R})$, by multilinearity of the determinant, an infinitesimal perturbation of the position of nodes allows to invert the matrix if it is indeed singular. We obtain thus the pressures $p_i$ and as a consequence the flows $\phi_{ij}$.
+\paragraph{Fourth Level Heading}
+% Here are examples of quotes and epigraphs.
+\begin{quote}
+The significant problems we have cannot be solved at the same level of thinking with which we created them.\endnote{Albert Einstein said this.}
+\end{quote}
 
-The evolution of the diameter $D_{ij}$ between two equilibrium stages, i.e. two successive time steps, is then a function of the flow at equilibrium, through the equation
+\begin{epigraph}{Albert Einstein}
+Anyone who has never made a mistake has never tried anything new.
+\end{epigraph}
 
-\begin{equation}
-D_{ij} (t+1) - D_{ij} = \delta t \left[ \frac{\phi_{ij}(t)^\gamma}{1 + \phi_{ij}(t)^\gamma} - D_{ij}(t)\right]
-\end{equation}
+\subparagraph{Fifth level heading}
+Measurements should be given in SI or SI-derived units.
+Chemical substances should be referred to by the generic name only. Trade names should not be used. Drugs should be referred to by their generic names. If proprietary drugs have been used in the study, refer to these by their generic name, mentioning the proprietary name, and the name and location of the manufacturer, in parentheses.
 
-The default value for $\gamma$ is $1.8$, following the configuration used by~\cite{tero2010rules}. We furthermore take $\delta t = 0.05$ and $I_0 = 1$. We will vary only the parameter $\gamma$, what already gives a large flexibility on generated network configurations. The generation of a network can be achieved from an initial network, until reaching a convergence criteria, for example $\sum_{ij} \Delta D_{ij} (t) < \varepsilon$ with $\varepsilon$ fixed threshold parameter. We will use this model with a criteria of a fixed number of total iterations.
+\begin{table}[bt]
+\caption{This is a table. Tables should be self-contained and complement, but not duplicate, information contained in the text. They should be not be provided as images. Legends should be concise but comprehensive – the table, legend and footnotes must be understandable without reference to the text. All abbreviations must be defined in footnotes.}
+\begin{threeparttable}
+\begin{tabular}{lccrr}
+\headrow
+\thead{Variables} & \thead{JKL ($\boldsymbol{n=30}$)} & \thead{Control ($\boldsymbol{n=40}$)} & \thead{MN} & \thead{$\boldsymbol t$ (68)}\\
+Age at testing & 38 & 58 & 504.48 & 58 ms\\
+Age at testing & 38 & 58 & 504.48 & 58 ms\\
+Age at testing & 38 & 58 & 504.48 & 58 ms\\
+Age at testing & 38 & 58 & 504.48 & 58 ms\\
+\hiderowcolors
+stop alternating row colors from here onwards\\
+Age at testing & 38 & 58 & 504.48 & 58 ms\\
+Age at testing & 38 & 58 & 504.48 & 58 ms\\
+\hline  % Please only put a hline at the end of the table
+\end{tabular}
 
+\begin{tablenotes}
+\item JKL, just keep laughing; MN, merry noise.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
 
-%%%%%%%%%%%%%%%%%%
-\subsection{Results}
+\section*{acknowledgements}
+Acknowledgements should include contributions from anyone who does not meet the criteria for authorship (for example, to recognize contributions from people who provided technical help, collation of data, writing assistance, acquisition of funding, or a department chairperson who provided general support), as well as any funding or other support information.
 
-The model is implemented in the NetLogo agent-based language, and an implementation as a generator of network for synthetic urban configurations is available at \url{https://github.com/JusteRaimbault/Governance/tree/master/Models/Lutecia}.
+\section*{conflict of interest}
+You may be asked to provide a conflict of interest statement during the submission process. Please check the journal's author guidelines for details on what to include in this section. Please ensure you liaise with all co-authors to confirm agreement with the final statement.
 
+\printendnotes
 
-\subsubsection{Designing public transportation lines}
+% Submissions are not required to reflect the precise reference formatting of the journal (use of italics, bold etc.), however it is important that all key elements of each reference are included.
+\bibliography{sample}
 
-A first illustration of an application of this model is the preselection of travelling routes for a bus transportation networks. Given a set of places to connect, route design is similar to a multi-objective travelling salesman problem \cite{angus2007crowding} since cumulated length of lines but also efficiency of the network must be optimized. Running the model on a street network with predefined stops will unveil preferred roads for the bus lines, as illustrated in Fig.~\ref{fig:romainville} for the city of Romainville, France.
+\begin{biography}[example-image-1x1]{A.~One}
+Please check with the journal's author guidelines whether author biographies are required. They are usually only included for review-type articles, and typically require photos and brief biographies (up to 75 words) for each author.
+\bigskip
+\bigskip
+\end{biography}
 
-
-%%%%%%%%%%%%%
-\begin{figure}[h!]
-	\includegraphics[width=0.32\textwidth]{figures/slimemould_tick1.png}	\includegraphics[width=0.32\textwidth]{figures/slimemould_tick10.png}	\includegraphics[width=0.32\textwidth]{figures/slimemould_tick20.png}\\	\includegraphics[width=0.32\textwidth]{figures/slimemould_tick50.png}	\includegraphics[width=0.32\textwidth]{figures/slimemould_tick101.png}
-	\includegraphics[width=0.32\textwidth]{figures/slimemould_reseauFinal.png}
-	\caption{\textbf{Application of the slime mould model to design a robust public transportation network.} Given an initial network corresponding to the street network extracted from OpenStreetMap for the city of Romainville, France (top left), with stops in red which act randomly at each step as sources and sinks, the iteration of the model progressively converges towards a steady state with fixed diameters for links (from left to right and top to bottom).\label{fig:romainville}}
-\end{figure}
-%%%%%%%%%%%%%
-
-
-
-\subsubsection{Generating optimal networks}
-
-
-
-
-%%%%%%%%%%%%%%
-\begin{figure}[h!]
-	\includegraphics[width=0.32\linewidth]{figures/bionw_territ6_gamma1_1_bis.png}	\includegraphics[width=0.32\linewidth]{figures/bionw_territ6_gamma1_2_quart.png}
-	\includegraphics[width=0.32\linewidth]{figures/bionw_territ6_gamma1_25_bis.png}\\	\includegraphics[width=0.32\linewidth]{figures/bionw_territ6_gamma1_3_bis.png}	\includegraphics[width=0.32\linewidth]{figures/bionw_territ6_gamma1_5.png}	\includegraphics[width=0.32\linewidth]{figures/bionw_territ6_gamma1_8.png}
-	\caption{\textbf{Example of networks.} We show, for a given urban configuration (centers and population density in background color), the networks in blue generated with varying values of the parameter $\gamma \in \{1.1 ; 1.2 ; 1.25 ; 1.3 ; 1.5 ; 1.8 \}$ (from left to right and top to bottom).\label{fig:exnw}}
-\end{figure}
-%%%%%%%%%%%%%%
-
-% Examples (values from netlogo5 - examples urban config)
-% gamma = 1.1 (bis)
-% observer: "length = 0.46194462288828997"
-% observer: "perf = 1.3060253131748516"
-
-% gamma = 1.2 (quart)
-% observer: "length = 0.33904251385875966"
-% observer: "perf = 1.125244732766119"
-
-% gamma = 1.25 (bis)
-% observer: "length = 0.3044382201583243"
-% observer: "perf = 1.135368793729363"
-
-% gamma = 1.3 (bis)
-% observer: "length = 0.2742468359876043"
-%observer: "perf = 1.1384882546283668"
-
-% gamma = 1.5
-% observer: "length = 0.26534572051770583"
-% observer: "perf = 1.1405973338894875"
-
-% gamma = 1.8
-% observer: "length = 0.20788352793069367"
-% observer: "perf = 1.308682580064978"
-
-%%%%%%%%%%%%%%
-\begin{figure}[h!]
-	\includegraphics[width=1.2\linewidth]{figures/paretoSpeedLength.png}
-	\caption{\textbf{Pareto evaluation of simulated networks.} We plot the values of the contradictory performance and length indicators, for all the simulated networks. Point color gives the model used to generate the network and point size the value of the reinforcement parameter $\gamma$ when the slime mould model is used.\label{fig:pareto}}
-\end{figure}
-%%%%%%%%%%%%%%
-
-The second application is to the generation of synthetic urban infrastructure network, for example for the automatic generation of scenarios for the test of Land-use transport interaction models \cite{wegener2004land}. Let assume that an urban configuration is given, in the sense of centers and an associated population distribution in space (which can be achieved for example using an exponential mixture model \cite{anas1998urban}). The issue of designing a reasonable infrastructure network associated to that structure, given constraints of optimality on cost, robustness and efficiency, is indeed a difficult problem. Given $N$ centers located in space, we generate a fine grid network which consists in the initial network for the slime mould model. At each time step, one center is chosen as the source with a flow $I_0$ and all others share the sinking flow with an equal proportion $-I_0 / (N - 1)$. The model is iterated a fixed number of steps $t_f = 1000$, after which nodes with diameter $D_{ij} < \varepsilon = 0.05$ are removed. The final network is then obtained by replacing all sequences of nodes with a degree of exactly two and the corresponding edge by a single link. We keep all parameters fixed except the reinforcement strength $\gamma$ which has a strong effect on emerging network structure.
-
-We show in Fig.~\ref{fig:exnw} examples of generated network, for a fixed urban structure, obtained with different values of $\gamma$. Networks for lower values of $\gamma$ have more links, and are therefore more efficient in terms of connection speed between two arbitrary nodes and robustness to link deletion, but are more costly, whereas networks for higher values of $\gamma$ are cheaper but less robust. This shows the potentiality for a decision maker which has to make a compromise between these contradictory objectives. We proceed then to a more systematic exploration of the optimality of these network. We draw with a Latin Hypercube Sampling 100 random parameter values for the couple $(N,\gamma)$ such that $N \in \{ 2 ; \ldots ; 6 \}$ and $\gamma \in \left[ 0.5 ; 2.5\right]$, and we repeat a random uniform distribution of centers and the corresponding network generation 100 times. For a baseline comparison, two other network generation heuristics are used, namely a complete network between all the centers with direct links, and a tree network obtained by progressive connexion of closest weak components of the network. This gives a total of 30000 model runs. The significant corresponding computing time and the execution of this workflow is achieved using the OpenMOLE model exploration software, which allows a transparent distribution of model runs on a computation grid infrastructure \cite{reuillon2013openmole}. The indicators to be minimized within our experiment are the relative network length (sum of length of links divided by the length of a complete networks) and the relative performance (the average distance between nodes relative to the euclidian distance, see \cite{banos2012towards}). We show in Fig.~\ref{fig:pareto} the projected networks in the indicator space. The full network (red points) can have a good performance but is always very costly. The tree heuristic (blue points) is mostly dominated by the slime mould model (green points), since the majority of the corresponding point cloud lies at higher values of both indicators than a significant proportion of the slime mould point cloud. We observe that tuning the value of $\gamma$ strongly changes the location in the indicator space, allowing the production of a Pareto front for the two objectives. As expected and observed in the examples, low $\gamma$ values give costly but performant networks, whereas high $\gamma$ values give cheap and less performant networks.
-
-We are through this experiment able to select Pareto optimal networks, answering a difficult engineering issue which is the design of a transportation network with multi-objective constraints. This example shows thus how the use of a model from a complex systems discipline can be useful to systems engineering.
-
-
-%%%%%%%%%%%%%%%%
-\section{Discussion}
-%%%%%%%%%%%%%%%%
-
-%. -> roadmap / towards integrated disciplines ? (add knowledge domains integration ?)
-%  -> morphogenetic engineering as an example of such a discipline
-
-A more thorough exploration of the scientific landscape as we did in the second section, and a broader survey of bridging approaches as the one we illustrated, would give a more systematic demonstration of the idea we tried to defend in this paper. We however believe these case studies are additional clues of the lack of integration and of the potentialities offered by a stronger integration of approaches to complex socio-technical systems. The other direction, i.e. the use of systems engineering concepts in the study of complex systems, could be highly beneficial, as for example agent-based modeling has often the reputation of a lack of rigor \cite{rand2011agent}, and should be further investigated in a similar way.
-
-A question directly raised by the perspective we give is to what extent such integrated approaches would belong to existing disciplines, or would they be intrinsically interdisciplinary, with all the complications and benefits it implies (see e.g. \cite{banos2013pour} describing the ``virtuous spiral of disciplinarity and interdisciplinarity''). This is a broad an open question, but we can at least give an example of a new discipline going beyond this distinction, which is \emph{Morphogenetic Engineering} \cite{doursat2012morphogenetic}. This rather novel discipline is a branch of Artificial Life, and focuses on designing and programming complex systems from the bottom-up. At the intersection between top-down architecting practices (typical of systems engineering) and bottom-up complex systems studies, it allows the elaboration of \emph{emergent architecture}. It remains disciplinary but is by nature integrated in its objects and methods, and is therefore an illustration of the kind of approaches we defend here.
-
-The issue of which type of integration also remains open: the Complex Systems Roadmap \cite{2009arXiv0907.2221B} recalls that a \emph{vertical} integration must be done to create integrated disciplines tackling several levels of the systems considered, but that also an \emph{horizontal} integration in terms of questions transversal to disciplines being considered is necessary. We also suggest that an integration of \emph{Knowledge Domains} \cite{raimbault2017applied}, i.e. of the different components of knowledge such as theories, models, data, methods, would be highly beneficial to couple approaches that do not communicate yet, since these are the objects that can be borrowed for example. Finally, the issue of an operational implementation of such approaches, in particular for the systems engineering community which has strong constraints, is beyond the scope of this paper and should be investigated in future work.
-
-
-
-%%%%%%%%%%%%%%%%
-\section{Conclusion}
-%%%%%%%%%%%%%%%%
-
-We have in this paper given case studies to illustrate that systems engineering and complex systems approaches are highly disconnected, through a bibliometric study, and that the transfer of concept is possible, through the application of biological network generation to network design. This paves the way for similar more systematic studies enhancing reflexivity and the integration of disciplines.
-
-
-
-\subsection*{Acknowledgments}
-
-\footnotesize
-% EGI
-Results obtained in this paper were computed on the vo.complex-system.eu virtual organization of the European Grid Infrastructure ( http://www.egi.eu ). We thank the European Grid Infrastructure and its supporting National Grid Initiatives (France-Grilles in particular) for providing the technical support and infrastructure.
-
-%%%%%%%%%%%%%%%%
-%% Biblio
-%%%%%%%%%%%%%%%%
-
-
-\bibliographystyle{unsrt}
-\bibliography{biblio}
-%\bibliography{biblio/biblio,/Users/Juste/Documents/ComplexSystems/CityNetwork/Biblio/BibTeX/CityNetwork}
-
-
-
-
-
+\graphicalabstract{example-image-1x1}{Please check the journal's author guildines for whether a graphical abstract, key points, new findings, or other items are required for display in the Table of Contents.}
 
 \end{document}
